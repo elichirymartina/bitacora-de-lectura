@@ -8,6 +8,7 @@ function App() {
   const [libros, setLibros] = useState<Libro[]>([]);
   const [cargando, setCargando] = useState<boolean>(true);
   const [mostrarModal, setMostrarModal] = useState<boolean>(false);
+  const [libroSeleccionado, setLibroSeleccionado] = useState<Libro | null>(null);
 
   const cargarLibros = async () => {
     try {
@@ -25,9 +26,21 @@ function App() {
     cargarLibros();
   }, []);
 
-  // Extraemos listas limpias y únicas para el autocompletado (Find or Create)
-  const autoresExistentes = Array.from(new Set(libros.map(l => l.autor?.nombre).filter(Boolean)));
-  const generosExistentes = Array.from(new Set(libros.map(l => l.genero?.descripcion).filter(Boolean)));
+  const autoresExistentes = Array.from(
+    new Set(
+      libros
+        .map((l) => l.autor?.nombre)
+        .filter((nombre): nombre is string => Boolean(nombre))
+    )
+  );
+
+  const generosExistentes = Array.from(
+    new Set(
+      libros
+        .map((l) => l.genero?.descripcion)
+        .filter((descripcion): descripcion is string => Boolean(descripcion))
+    )
+  );
 
   const renderizarEstrellas = (cantidad: number) => {
     return Array.from({ length: 5 }, (_, index) => (
@@ -49,10 +62,13 @@ function App() {
 
       <main className="bitacora-main">
         <div className="action-area">
-          <button 
-            type="button" 
+          <button
+            type="button"
             className="btn-registrar"
-            onClick={() => setMostrarModal(true)}
+            onClick={() => {
+              setLibroSeleccionado(null);
+              setMostrarModal(true);
+            }}
           >
             <span className="plus-icon">+</span> Registrar libro
           </button>
@@ -78,14 +94,21 @@ function App() {
                 <div className="card-info">
                   <h3 className="libro-titulo">{libro.titulo}</h3>
                   <p className="libro-meta">
-                    {libro.autor?.nombre} • <span className="libro-anio">{libro.anioLectura?.split('-')[0]}</span>
+                    {libro.autor?.nombre} •{' '}
+                    <span className="libro-anio">{libro.anioLectura?.split('-')[0]}</span>
                   </p>
                 </div>
+
                 <div className="card-actions">
-                  <div className="stars-display">
-                    {renderizarEstrellas(libro.estrellas)}
-                  </div>
-                  <button type="button" className="btn-ver-mas">
+                  <div className="stars-display">{renderizarEstrellas(libro.estrellas)}</div>
+                  <button
+                    type="button"
+                    className="btn-ver-mas"
+                    onClick={() => {
+                      setLibroSeleccionado(libro);
+                      setMostrarModal(true);
+                    }}
+                  >
                     📖 Ver más
                   </button>
                 </div>
@@ -96,15 +119,17 @@ function App() {
       </main>
 
       {mostrarModal && (
-        <LibroForm 
-          tituloModal="📖 Registrar libro" 
-          textoBoton="Registrar libro" 
+        <LibroForm
+          tituloModal={libroSeleccionado ? '📚 Detalle del libro' : '📖 Registrar libro'}
+          textoBoton={libroSeleccionado ? 'Modificar' : 'Registrar libro'}
+          libro={libroSeleccionado}
           autoresExistentes={autoresExistentes}
           generosExistentes={generosExistentes}
           onClose={() => {
             setMostrarModal(false);
+            setLibroSeleccionado(null);
             cargarLibros();
-          }} 
+          }}
         />
       )}
     </div>
