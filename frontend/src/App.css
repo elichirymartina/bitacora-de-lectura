@@ -1,184 +1,167 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+body {
+  background-color: #F0E6CA; /* 10- Color de Fondo */
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
+.bitacora-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 60px 20px; /* Más espacio arriba para que baje el título */
 }
 
-#center {
+/* --- ENCABEZADO --- */
+.bitacora-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.header-box {
+  background-color: #FDF6E3; /* 5- Relleno recuadro título */
+  padding: 24px 60px;
+  border-radius: 12px;
+  border: 3px solid #D4A76A; /* 4- Borde recuadro título */
+  box-shadow: 5px 5px 0px #D4A76A; /* 4- Sombra recuadro título */
+  text-align: center;
+}
+
+.header-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.header-box h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #3D2B1F; /* 6- Control de Texto Principal */
+}
+
+.subtitle {
+  margin: 4px 0 0 0;
+  font-style: italic;
+  color: #5C3D1E; /* 8- Color de Subtítulos */
+  font-size: 1.05rem;
+}
+
+/* --- BOTÓN REGISTRAR --- */
+.action-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn-registrar {
+  background-color: #8B6914; /* 1- Color botón registrar */
+  color: #FDF6E3; /* 3- Color texto botón registrar */
+  border: 3px solid #5C3D1E; /* 2- Borde botón registrar */
+  padding: 10px 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #5C3D1E; /* 2- Sombra botón registrar */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.1s ease;
+}
+
+.btn-registrar:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #5C3D1E;
+}
+
+.btn-registrar:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #5C3D1E;
+}
+
+.contador-libros {
+  text-align: center;
+  font-style: italic;
+  color: #5C3D1E;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+/* --- TARJETAS DE LIBROS --- */
+.libros-list {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+  gap: 14px;
 }
 
-#next-steps {
+.libro-card {
+  background-color: #FDF6E3;
+  border: 2px solid #5C3D1E;
+  border-radius: 8px;
+  padding: 16px 24px;
   display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 4px 4px 0px rgba(92, 61, 30, 0.15);
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+.libro-titulo {
+  margin: 0 0 4px 0;
+  font-size: 1.3rem;
+  color: #3D2B1F; /* 6- Títulos de los libros */
 }
 
-#next-steps ul {
-  list-style: none;
-  padding: 0;
+.libro-meta {
+  margin: 0;
+  color: #5C3D1E;
+  font-size: 0.95rem;
+}
+
+.libro-anio {
+  font-weight: bold;
+}
+
+/* --- ACCIONES Y ESTRELLAS --- */
+.card-actions {
   display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+  align-items: center;
+  gap: 20px;
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+.estrella-lista {
+  font-size: 1.3rem;
 }
 
-.ticks {
-  position: relative;
-  width: 100%;
+.estrella-lista.activa {
+  color: #C9A96E; /* 9- Color de las estrellas */
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
+.estrella-lista.inactiva {
+  color: #E2D6BC;
+}
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
+.btn-ver-mas {
+  background-color: #F5E6C8; /* 7- Relleno botón ver más */
+  color: #5C3D1E; /* 8- Texto botón ver más */
+  border: 2px solid #5C3D1E; /* 8- Reborde botón ver más */
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #5C3D1E; /* 8- Sombra botón ver más */
+}
+
+.btn-ver-mas:hover {
+  background-color: #EADCBF;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #5C3D1E;
+  font-style: italic;
 }
