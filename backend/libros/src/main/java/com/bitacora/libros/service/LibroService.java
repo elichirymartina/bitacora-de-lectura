@@ -6,7 +6,7 @@ import com.bitacora.libros.dto.LibroDTO;
 import com.bitacora.libros.entities.Libro;
 
 public interface LibroService {
-    // El método estrella que procesa el DTO y aplica el Find or Create
+
     Libro guardarLibro(LibroDTO libroDTO);
     
     List<Libro> obtenerTodosLosLibros();

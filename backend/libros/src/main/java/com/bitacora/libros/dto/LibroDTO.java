@@ -6,17 +6,17 @@ import com.bitacora.libros.entities.Formato;
 
 public class LibroDTO {
     private String titulo;
-    private String autorNombre;       // <-- ¡Clave! Recibe el texto plano del autor
-    private String generoDescripcion; // <-- ¡Clave! Recibe el texto plano del género
+    private String autorNombre;       
+    private String generoDescripcion; 
     private LocalDate anioLectura;
     private String resenia;
     private String citaDestacada;
     private Formato formato;
     private String personajeFavorito;
     private boolean finalizado;
-    private Integer estrellas;        // Mantenemos Integer para que pueda ser null
+    private Integer estrellas;       
 
-    // Constructor vacío obligatorio para que Spring lo pueda deserializar (parsear el JSON)
+  
     public LibroDTO() {
     }
 

@@ -8,7 +8,6 @@ export interface Genero {
   descripcion: string;
 }
 
-// Lo que nos devuelve el GET del Backend
 export interface Libro {
   idLibro: number;
   titulo: string;
@@ -23,12 +22,12 @@ export interface Libro {
   finalizado: boolean;
 }
 
-// Lo que enviamos en el POST / PUT
+
 export interface LibroFormPayload {
   titulo: string;
   autorNombre: string;
   generoDescripcion: string;
-  anioLectura: string; // Le mandaremos "YYYY-01-01"
+  anioLectura: string;
   resenia: string;
   citaDestacada: string;
   estrellas: number;

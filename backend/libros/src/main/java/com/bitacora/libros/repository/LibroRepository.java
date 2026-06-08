@@ -12,7 +12,4 @@ public interface LibroRepository extends JpaRepository<Libro, Long> {
     
     List<Libro> findAllByOrderByTituloAsc();
 
-    List<Libro> findByFinalizado(boolean finalizado);
-
-
 }

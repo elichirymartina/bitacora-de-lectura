@@ -1,18 +1,17 @@
-/* Fondo oscurecido para efecto Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(61, 43, 31, 0.4); /* Filtro café translúcido */
+  background-color: rgba(61, 43, 31, 0.4); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000; /* Por encima de todo */
+  z-index: 2000;
 }
 
-/* Caja del Formulario */
+
 .modal-content {
   background-color: #FDF6E3;
   border: 3px solid #5C3D1E;
@@ -26,7 +25,7 @@
   overflow-y: auto;
 }
 
-/* Encabezado del modal */
+
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -50,7 +49,7 @@
   cursor: pointer;
 }
 
-/* Estructura del Formulario */
+
 .bitacora-form {
   display: flex;
   flex-direction: column;
@@ -69,7 +68,7 @@
   color: #3D2B1F;
 }
 
-/* Filas combinadas */
+
 .form-row-three {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1.2fr;
@@ -82,7 +81,7 @@
   gap: 12px;
 }
 
-/* Inputs Literarios Comunes */
+
 .input-literario {
   background-color: #FFFDF9;
   border: 2px solid #D4A76A;
@@ -104,7 +103,7 @@
   height: 100%;
 }
 
-/* Checkbox personalizado */
+
 .checkbox-group {
   justify-content: center;
 }
@@ -119,7 +118,7 @@
   margin-top: 20px;
 }
 
-/* Contenedor de Citas con comillas tipográficas */
+
 .quote-outer-container {
   position: relative;
   background-color: #F5E6C8;
@@ -161,13 +160,13 @@
   background: none;
 }
 
-/* Textarea de Notas personales */
+
 .lines-textarea {
   resize: vertical;
   height: 80px;
 }
 
-/* --- ACCIONES FINALIZACIÓN DEL MODAL --- */
+
 .modal-actions {
   display: flex;
   justify-content: flex-end;
@@ -207,7 +206,7 @@
   background-color: #725510;
 }
 
-/* Estilos para las Estrellas Interactivas del Formulario */
+
 .stars-rating-container {
   display: flex;
   align-items: center;
@@ -231,11 +230,11 @@
 }
 
 .estrella-voto.activa {
-  color: #C9A96E; /* Tu color 9 de estrellas */
+  color: #C9A96E; 
 }
 
 .estrella-voto.inactiva {
-  color: #E2D6BC; /* Gris/crema apagado */
+  color: #E2D6BC;
 }
 
 .stars-hint {
@@ -246,7 +245,7 @@
   margin-left: 8px;
 }
 
-/* Alerta de Error en el Formulario */
+
 .error-alert {
   background-color: #f8d7da;
   color: #721c24;

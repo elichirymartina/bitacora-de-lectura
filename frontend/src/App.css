@@ -1,8 +1,7 @@
-/* src/App.css */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 body {
-  background-color: #F0E6CA; /* 10- Color de Fondo */
+  background-color: #F0E6CA;
   margin: 0;
   font-family: 'Playfair Display', Georgia, serif;
 }
@@ -10,10 +9,10 @@ body {
 .bitacora-container {
   max-width: 850px;
   margin: 0 auto;
-  padding: 60px 20px; /* Más espacio arriba para que baje el título */
+  padding: 60px 20px;
 }
 
-/* --- ENCABEZADO --- */
+
 .bitacora-header {
   display: flex;
   justify-content: center;
@@ -21,11 +20,11 @@ body {
 }
 
 .header-box {
-  background-color: #FDF6E3; /* 5- Relleno recuadro título */
+  background-color: #FDF6E3;
   padding: 24px 60px;
   border-radius: 12px;
-  border: 3px solid #D4A76A; /* 4- Borde recuadro título */
-  box-shadow: 5px 5px 0px #D4A76A; /* 4- Sombra recuadro título */
+  border: 3px solid #D4A76A;
+  box-shadow: 5px 5px 0px #D4A76A;
   text-align: center;
 }
 
@@ -38,17 +37,17 @@ body {
 .header-box h1 {
   margin: 0;
   font-size: 2.2rem;
-  color: #3D2B1F; /* 6- Control de Texto Principal */
+  color: #3D2B1F;
 }
 
 .subtitle {
   margin: 4px 0 0 0;
   font-style: italic;
-  color: #5C3D1E; /* 8- Color de Subtítulos */
+  color: #5C3D1E;
   font-size: 1.05rem;
 }
 
-/* --- BOTÓN REGISTRAR --- */
+
 .action-area {
   display: flex;
   justify-content: center;
@@ -56,16 +55,16 @@ body {
 }
 
 .btn-registrar {
-  background-color: #8B6914; /* 1- Color botón registrar */
-  color: #FDF6E3; /* 3- Color texto botón registrar */
-  border: 3px solid #5C3D1E; /* 2- Borde botón registrar */
+  background-color: #8B6914;
+  color: #FDF6E3;
+  border: 3px solid #5C3D1E;
   padding: 10px 24px;
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: bold;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 4px 4px 0px #5C3D1E; /* 2- Sombra botón registrar */
+  box-shadow: 4px 4px 0px #5C3D1E;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -90,7 +89,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* --- TARJETAS DE LIBROS --- */
+
 .libros-list {
   display: flex;
   flex-direction: column;
@@ -111,7 +110,7 @@ body {
 .libro-titulo {
   margin: 0 0 4px 0;
   font-size: 1.3rem;
-  color: #3D2B1F; /* 6- Títulos de los libros */
+  color: #3D2B1F;
 }
 
 .libro-meta {
@@ -124,7 +123,7 @@ body {
   font-weight: bold;
 }
 
-/* --- ACCIONES Y ESTRELLAS --- */
+
 .card-actions {
   display: flex;
   align-items: center;
@@ -136,7 +135,7 @@ body {
 }
 
 .estrella-lista.activa {
-  color: #C9A96E; /* 9- Color de las estrellas */
+  color: #C9A96E; 
 }
 
 .estrella-lista.inactiva {
@@ -144,15 +143,15 @@ body {
 }
 
 .btn-ver-mas {
-  background-color: #F5E6C8; /* 7- Relleno botón ver más */
-  color: #5C3D1E; /* 8- Texto botón ver más */
-  border: 2px solid #5C3D1E; /* 8- Reborde botón ver más */
+  background-color: #F5E6C8;
+  color: #5C3D1E; 
+  border: 2px solid #5C3D1E;
   padding: 6px 16px;
   border-radius: 6px;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #5C3D1E; /* 8- Sombra botón ver más */
+  box-shadow: 2px 2px 0px #5C3D1E;
 }
 
 .btn-ver-mas:hover {

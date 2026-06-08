@@ -1,9 +1,9 @@
 :root {
-  --bg-main: #f3eee1; /* Crema de fondo */
-  --bg-card: #fffbf4; /* Fondo de tarjetas y modales */
-  --text-main: #4a3e2a; /* Marrón oscuro literario para textos */
-  --text-muted: #8c7e65; /* Texto secundario */
-  --primary-olive: #7c682b; /* El verde/dorado de tus botones principales */
+  --bg-main: #f3eee1; 
+  --bg-card: #fffbf4; 
+  --text-main: #4a3e2a;
+  --text-muted: #8c7e65; 
+  --primary-olive: #7c682b; 
   --primary-hover: #635220;
   --border-color: #dccfb0;
   --danger-color: #a34242;
@@ -16,12 +16,12 @@ body {
   margin: 0;
   background-color: var(--bg-main);
   color: var(--text-main);
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; /* O la tipografía script/serif de tu diseño */
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   background-image: radial-gradient(#decfa6 1px, transparent 1px);
-  background-size: 24px 24px; /* Simula ese patrón sutil de puntitos de fondo */
+  background-size: 24px 24px; 
 }
 
-/* Clases de utilidad para botones estilo Figma */
+
 .btn-primary {
   background-color: var(--primary-olive);
   color: #fff;
@@ -30,7 +30,7 @@ body {
   border-radius: var(--border-radius-cozy);
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 2px 2px 0px #4a3e2a; /* Sombra sólida estilo retro/cozy */
+  box-shadow: 2px 2px 0px #4a3e2a;
   transition: all 0.2s ease;
 }
 
