@@ -13,11 +13,11 @@ export interface Libro {
   titulo: string;
   autor: Autor;
   genero: Genero;
-  anioLectura: string; // "YYYY-MM-DD"
+  anioLectura: string;
   resenia: string;
   citaDestacada: string;
   estrellas: number;
-  formato: 'FISICO' | 'DIGITAL';
+  formato: 'FISICO' | 'DIGITAL' | 'AUDIOLIBRO';
   personajeFavorito: string;
   finalizado: boolean;
 }
@@ -31,7 +31,7 @@ export interface LibroFormPayload {
   resenia: string;
   citaDestacada: string;
   estrellas: number;
-  formato: 'FISICO' | 'DIGITAL';
+  formato: 'FISICO' | 'DIGITAL' | 'AUDIOLIBRO';
   personajeFavorito: string;
   finalizado: boolean;
 }

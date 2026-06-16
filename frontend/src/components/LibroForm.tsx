@@ -26,7 +26,7 @@ export const LibroForm = ({
   const [autor, setAutor] = useState('');
   const [anioLectura, setAnioLectura] = useState(new Date().getFullYear().toString());
   const [genero, setGenero] = useState('');
-  const [formato, setFormato] = useState<'FISICO' | 'DIGITAL' | ''>('');
+  const [formato, setFormato] = useState<'FISICO' | 'DIGITAL' | 'AUDIOLIBRO' | ''>('');
   const [personajeFavorito, setPersonajeFavorito] = useState('');
   const [finalizado, setFinalizado] = useState(true);
   const [citaDestacada, setCitaDestacada] = useState('');
@@ -201,7 +201,7 @@ export const LibroForm = ({
               <select
                 className="input-literario select-literario"
                 value={formato}
-                onChange={(e) => setFormato(e.target.value as 'FISICO' | 'DIGITAL' | '')}
+                onChange={(e) => setFormato(e.target.value as 'FISICO' | 'DIGITAL' | 'AUDIOLIBRO' | '')}
                 required
               >
                 <option value="" disabled>
@@ -209,6 +209,7 @@ export const LibroForm = ({
                 </option>
                 <option value="FISICO">Físico</option>
                 <option value="DIGITAL">Digital</option>
+                <option value="AUDIOLIBRO">Audiolibro</option>
               </select>
             </div>
           </div>
